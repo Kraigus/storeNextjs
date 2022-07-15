@@ -1,7 +1,9 @@
+//eslint-disable-next-line
 module.exports = {
 	images: {
 		domains: ["courses-top.ru"],
 	},
+	//eslint-disable-next-line
 	webpack(config, options) {
 		config.module.rules.push({
 			loader: "@svgr/webpack",
