@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 import { useState } from 'react';
-import { Htag, Button, P, Tag, Rating } from '../components';
+import { Htag, Button, P, Tag, Rating, Input, Textarea } from '../components';
 import { withLayout } from '../layout/Layout';
 import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
@@ -41,6 +41,8 @@ function Home({ menu }: HomeProps): JSX.Element {
                 a
             </Tag>
             <Rating rating={rating} isEditable setRating={setRating} />
+            <Input placeholder="Тест" />
+            <Textarea placeholder="Тест" />
         </>
     );
 }
@@ -60,7 +62,6 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
         },
     };
 };
-
 
 interface HomeProps extends Record<string, unknown> {
     menu: MenuItem[];
